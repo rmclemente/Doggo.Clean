@@ -1,0 +1,39 @@
+version: "3.5"
+
+services:
+  postgres:
+    image: postgres:14.2-alpine
+    container_name: postgres
+    hostname: postgres
+    volumes:
+      - postgresdata-doggo:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - doggo-network
+
+  seq:
+    image: datalust/seq:latest
+    container_name: seq
+    hostname: seq
+    environment:
+      - ACCEPT_EULA=Y
+    ports:
+      - 5341:80
+    networks:
+      - doggo-network
+    # network_mode: host
+    volumes: 
+      - seq-doggo:/data
+
+networks:
+  doggo-network:
+    name: doggo-network
+
+volumes:
+  postgresdata-doggo:
+    driver: local
+  seq-doggo:
+    driver: local
