@@ -2,7 +2,7 @@
 
 namespace Application.Requests.Breeds.Responses
 {
-    public class BreedBriefResponse : BaseRequestResponse
+    public class BreedBriefResponse : BaseResponse
     {
         public string Name { get; set; }
         public EnumerationResponse Type { get; set; }

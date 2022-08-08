@@ -1,10 +1,10 @@
 ﻿namespace Application.SeedWork;
 
-public abstract class BaseRequestResponse
+public abstract class BaseResponse
 {
     public Guid ExternalId { get; set; }
 
-    protected BaseRequestResponse(Guid externalId)
+    protected BaseResponse(Guid externalId)
     {
         ExternalId = externalId;
     }

@@ -1,6 +1,6 @@
 ﻿namespace Application.SeedWork;
 
-public abstract class AuditableResponse : BaseRequestResponse
+public abstract class AuditableResponse : BaseResponse
 {
     public DateTime? CreatedAt { get; protected set; }
     public string CreatedBy { get; protected set; }

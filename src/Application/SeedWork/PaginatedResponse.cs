@@ -1,6 +1,6 @@
 ﻿namespace Application.SeedWork;
 
-public class PaginatedResponse<T> where T : BaseRequestResponse
+public class PaginatedResponse<T> where T : BaseResponse
 {
     public IEnumerable<T> Result { get; set; }
     public int Page { get; set; }
